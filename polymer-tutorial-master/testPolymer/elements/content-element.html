@@ -1,0 +1,65 @@
+<link rel="import"
+      href="/components/polymer/polymer.html">
+
+<polymer-element name="content-element">
+  <template>
+ 
+  <link rel="stylesheet"
+      href="/components/bootstrap/bootstrap.min.css">
+
+   <style>
+   #description {
+    margin-top: 100px;
+    padding-bottom: 100px;
+   }
+  
+   .image {
+    width: 60px;
+    height: 60px;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    margin-left: 120px;
+   }
+   h4 {
+    text-align: center;
+    font-size: 24px;
+    font-weight: 500;
+    font-variant: small-caps;
+   }
+   h5 {
+    text-align: center;
+    font-size: 18px;
+    font-weight: 200;
+  }
+  </style>
+  <div id="container" class="container">
+    <div id= "description" class="col-md-12 col-md-push-0">
+      <content select="h3"></content>
+      <content select="p"></content>
+    </div>
+      <div class="col-md-4">
+        <div class="image" style="background-image: url('/components/images/top-game.jpg')"></div>
+        <h4>Number one on games chart </h4>
+        <h5> This app won the most important app's prize for two years in a row</h5> 
+      </div>
+      <div class="col-md-4">
+       <div class="image" style="background-image: url('/components/images/app-store.jpg')"></div>
+        <h4>Avalaible on Amazon store </h4>
+        <h5> Check out the app on Amazon store!<h5>
+      </div> 
+      <div class="col-md-4">
+       <div class="image" style="background-image: url('/components/images/under-age.jpg')"></div>
+       <h4>Forbidden under 16 </h4>
+       <h5> Only 16+ can play this game, because it contains explicit violence</h5>
+      </div>
+    </div>
+      
+  </div>
+  </template>
+  <script>
+    Polymer({
+     
+    });
+</script>
+</polymer-element>

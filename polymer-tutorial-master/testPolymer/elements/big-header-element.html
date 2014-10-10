@@ -1,0 +1,107 @@
+<link rel="import"
+      href="/components/polymer/polymer.html">
+
+<polymer-element name="big-header-element">
+  <template>
+ 
+  <link rel="stylesheet"
+      href="/components/bootstrap/bootstrap.min.css">
+
+   <style>
+    :host {
+      display: block;
+     
+    }
+
+    #navbar {
+      position: absolute;
+      background-color: transparent;
+      border: none;
+      border-radius: 0px;
+      width: 100%;
+    }
+
+    .navbar-default .navbar-brand {
+      color: #333;
+      text-transform: uppercase;
+      font-size: 20px;
+      font-weight: 500;
+      letter-spacing: 0.50px;
+    }
+    .navbar-default .navbar-brand:hover, .navbar-default .navbar-brand:focus {
+      color: #333;
+    }
+    .navbar-default .navbar-collapse {
+      padding-right: 50px;
+      font-size: 14px;
+      font-weight: 300;
+      letter-spacing: 0.5px;
+    }
+    .navbar-default .navbar-nav>li>a {
+      color: #333;
+      text-decoration: none;
+      text-transform: uppercase;
+    }
+    .navbar-default .navbar-nav>li>a:hover, .navbar-default .navbar-nav>li>a:focus {
+      color: #d2eecb;
+      background-color: transparent;
+    }
+    .navbar-default .navbar-nav>li>a:active {
+      text-decoration: underline;
+    }
+    #jumbotron {
+      background-image: url("/components/images/dwtd.jpg");
+      background-color: #333;
+      width: 100%;
+      height: 500px;
+      background-repeat: no-repeat;
+      background-size: cover;
+
+    }
+    #layer {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+    }
+
+    #container {
+      padding-top: 50px;
+    }
+    
+  </style>
+    <div id="navbar" class="navbar navbar-default" role="navigation">
+      <div class="container">      
+        <div class="navbar-header">
+          <button id="button" on-click="{{ on_click_button }}" type="button" class="navbar-toggle">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+        <a class="navbar-brand"> Brand </a> 
+        </div>
+        <div id="collapse" class="collapse navbar-collapse">
+          <ul class="nav navbar-nav navbar-right">
+            <li><a href="localhost:8000"> About </a> </li>
+            <li><a href="http://facebook.com"> Credits </a> </li>
+            <li><a href="http://virgilio.com"> Gallery </a> </li>
+            <li><a href="http://github.com"> Contact </a> </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div id="jumbotron" class="jumbotron">
+      <div id="container" class="container">
+        <content select="h1"></content>
+        <content select="h2"></content>
+      </div>
+    </div>
+  </template>
+  <script>
+    Polymer({
+     on_click_button: function (event) {
+      this.$.collapse.classlist.toggle('in');
+     }
+    });
+</script>
+</polymer-element>
