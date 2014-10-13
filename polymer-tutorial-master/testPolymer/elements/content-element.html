@@ -32,34 +32,44 @@
     font-size: 18px;
     font-weight: 200;
   }
+  #container {
+    margin-bottom: 50px;
+  }
   </style>
-  <div id="container" class="container">
+   <div id="container" class="container">
     <div id= "description" class="col-md-12 col-md-push-0">
       <content select="h3"></content>
       <content select="p"></content>
     </div>
-      <div class="col-md-4">
-        <div class="image" style="background-image: url('/components/images/top-game.jpg')"></div>
-        <h4>Number one on games chart </h4>
-        <h5> This app won the most important app's prize for two years in a row</h5> 
-      </div>
-      <div class="col-md-4">
-       <div class="image" style="background-image: url('/components/images/app-store.jpg')"></div>
-        <h4>Avalaible on Amazon store </h4>
-        <h5> Check out the app on Amazon store!<h5>
-      </div> 
-      <div class="col-md-4">
-       <div class="image" style="background-image: url('/components/images/under-age.jpg')"></div>
-       <h4>Forbidden under 16 </h4>
-       <h5> Only 16+ can play this game, because it contains explicit violence</h5>
-      </div>
-    </div>
-      
-  </div>
+      <template repeat="{{ feature in features }}">
+        <div class="col-md-4">
+          <div class="image" style="background-image: url('components/images/{{ feature.picture }}')"></div>
+          <h4>{{ feature.title }} </h4>
+          <h5>{{ feature.subtitle }}</h5> 
+        </div>
+      </template>
   </template>
   <script>
-    Polymer({
-     
+    Polymer('content-element', {
+
+      features: [
+        {
+          title: "Number one on games chart" ,
+          subtitle: "This app won the most important app's prize for two years in a row",
+          picture: "top-game.jpg"
+        },
+        {
+          title: "Avalaible on Amazon store" ,
+          subtitle: "Check out the app on Amazon store",
+          picture: "app-store.jpg"
+        },
+        {
+          title: "Forbidden under 16" ,
+          subtitle: "Only 16+ can play this game, because it contains explicit violence",
+          picture: "under-age.jpg"
+        }
+      ]
+
     });
 </script>
 </polymer-element>
