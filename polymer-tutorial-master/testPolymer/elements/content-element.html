@@ -12,15 +12,14 @@
     margin-top: 100px;
     padding-bottom: 100px;
    }
-  
-   .image {
+   img {
     width: 60px;
     height: 60px;
-    background-position: center center;
-    background-repeat: no-repeat;
-    background-size: contain;
-    margin-left: 120px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
    }
+  
    h4 {
     text-align: center;
     font-size: 24px;
@@ -43,7 +42,7 @@
     </div>
       <template repeat="{{ feature in features }}">
         <div class="col-md-4">
-          <div class="image" style="background-image: url('components/images/{{ feature.picture }}')"></div>
+          <img src=" /components/images/{{ feature.picture }} ">
           <h4>{{ feature.title }} </h4>
           <h5>{{ feature.subtitle }}</h5> 
         </div>

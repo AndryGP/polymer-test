@@ -19,6 +19,7 @@
       border: none;
       border-radius: 0px;
       width: 100%;
+      z-index: 1;
     }
 
     .navbar-default .navbar-brand {
@@ -78,17 +79,13 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-        <a class="navbar-brand"> Brand </a> 
+        <a class="navbar-brand"> DWTD </a> 
         </div>
         <div id="collapse" class="collapse navbar-collapse">
           <ul class="nav navbar-nav navbar-right">
             <template repeat="{{ link in links }}">
               <li class="link"><a href="{{ link.url }}" > {{ link.label }} </a></li>
             </template>
-            <!-- <li><a href="localhost:8000"> About </a> </li>
-            <li><a href="http://facebook.com"> Credits </a> </li>
-            <li><a href="http://virgilio.com"> Gallery </a> </li>
-            <li><a href="http://github.com"> Contact </a> </li> -->
           </ul>
         </div>
       </div>
@@ -114,11 +111,11 @@
         },
         {
           "label": "Projects",
-          "url": "http://www.twitter.com"
+          "url": "/projects.html"
         },
         {
           "label": "Contact",
-          "url": "http://cvdlab.org"
+          "url": "/contact.html"
         }
       ],
 
