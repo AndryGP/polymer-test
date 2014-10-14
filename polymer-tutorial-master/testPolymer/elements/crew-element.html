@@ -1,0 +1,94 @@
+<link rel="import"
+      href="/components/polymer/polymer.html">
+
+<polymer-element name="projects-element">
+  <template>
+ 
+  <link rel="stylesheet"
+      href="/components/bootstrap/bootstrap.min.css">
+
+  <style>
+    :host {
+      display: block;
+    }
+
+    img {
+      width: 150px;
+      height: 150px;
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+      border: 1px solid;
+    }
+
+    h3 {
+          text-align: center;
+          font-size: 20px;
+          font-weight: 400;
+          font-variant: small-caps;
+    }
+
+    p {
+      text-align: center;
+        font-size: 16px;
+        font-weight: 100;
+    }
+
+    #title {
+      margin-top: 50px;
+      margin-bottom: 50px;
+    }
+
+    
+
+    #columns {
+      margin-top: 50px;
+    }
+  </style>
+
+
+    <div id="projects">
+        <div id="container" class="container">
+            <content select="h1"></content>
+            <content select="h2"></content>
+        </div>
+      <template repeat="{{ project in projects }}">
+        <div id="columns" class="col-md-3">
+          <img src=" components/images/{{ project.picture }}">
+          <h3> {{ project.description }}</h3>
+          <p> {{ project.year }} </p>
+        </div>
+      </template>
+    </div>
+
+      
+  </template>
+  <script>
+    Polymer('projects-element', {
+
+      projects: [
+        {
+          description: "Dumb Ways To Die" ,
+          year: "2011",
+          picture: "dwtd-simple.jpg"
+        },
+        {
+          description: "Dumb Ways To Die Pro" ,
+          year: "2012",
+          picture: "dwtd-pro.jpg"
+        },
+        {
+          description: "Dumb Ways To Die Unlimited" ,
+          year: "2013",
+          picture: "dwtd-unlimited.jpg"
+        },
+        {
+          description: "Dumb Ways To Die Gold Edition" ,
+          year: "2014",
+          picture: "dwtd-gold.jpg"
+        },
+      ]
+
+    });
+</script>
+</polymer-element>
