@@ -1,0 +1,52 @@
+<link rel="import"
+      href="/components/polymer/polymer.html">
+
+<polymer-element name="header-element">
+  <template>
+ 
+    <link rel="stylesheet"
+      href="/components/bootstrap/bootstrap.min.css">
+
+    <style>
+      :host {
+      display: block;
+     
+    }
+
+    
+
+    </style>
+    <div id="footer" class="panel-footer">
+      <div class="col-md-4">
+        <h2>{{brand}}</h2>
+        <table id="icons" align="center">
+            <tbody>
+              <td> <a href="http://facebook.com/{{ fbuser }} target="_blank" "> <img id="facebook-icon" src="/components/images/facebook-icon.jpg"> </a> </td>
+              <td> <a href="http://twitter.com/{{ twituser }}" target="_blank"> <img id="twitter-icon" src="/components/images/twitter-icon.jpg"> </a> </td>
+              <td> <a href="http://plus.google.com/{{ plusnumber }}" target="_blank"> <img id="google-icon" src="/components/images/google-icon.jpg"> </a> </td>
+            </tbody>
+          </table>
+      </div>
+      <div class="col-md-4">
+        <p> Developed by {{developer}} </p>
+      </div>
+      <div class="col-md-4">
+        <h3> {{city}} </h3>
+        <p> {{address}}</p>
+      </div>
+    </div>
+  </template>
+  <script>
+    Polymer ({
+      fbuser: '',
+      twituser: '',
+      plusnumber: '',
+      brand: 'Dumb Ways to Die',
+      developer: 'GTA',
+      city: 'Rome, Italy',
+      address: 'Via della Vasca Navale, 79',
+
+      });
+
+</script>
+</polymer-element>
