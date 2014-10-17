@@ -52,11 +52,11 @@
             <content select="h1"></content>
             <content select="h2"></content>
         </div>
-      <template repeat="{{ project in projects }}">
+      <template repeat="{{ feature in features }}">
         <div id="columns" class="col-md-3">
-          <img src=" components/images/{{ project.picture }}">
-          <h3> {{ project.description }}</h3>
-          <p> {{ project.year }} </p>
+          <img src=" components/images/{{ feature.picture }}">
+          <h3> {{ feature.description }}</h3>
+          <p> {{ feature.year }} </p>
         </div>
       </template>
     </div>
@@ -66,28 +66,7 @@
   <script>
     Polymer('projects-element', {
 
-      projects: [
-        {
-          description: "Dumb Ways To Die" ,
-          year: "2011",
-          picture: "dwtd-simple.jpg"
-        },
-        {
-          description: "Dumb Ways To Die Pro" ,
-          year: "2012",
-          picture: "dwtd-pro.jpg"
-        },
-        {
-          description: "Dumb Ways To Die Unlimited" ,
-          year: "2013",
-          picture: "dwtd-unlimited.jpg"
-        },
-        {
-          description: "Dumb Ways To Die Gold Edition" ,
-          year: "2014",
-          picture: "dwtd-gold.jpg"
-        },
-      ]
+      
 
     });
 </script>

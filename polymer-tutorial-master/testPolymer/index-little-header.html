@@ -18,8 +18,37 @@
 
   <body style="background-color: #d2eecb">
   
-  	<header-element>
+  	<header-element id="header">
   		
   	</header-element>
+
+    <script>
+      var header = document.getElementById('header');
+
+
+      links= [
+        {
+          "label": "About",
+          "url": "/about.html"
+        },
+        {
+          "label": "Crew",
+          "url": "/crew.html"
+        },
+        {
+          "label": "Projects",
+          "url": "/projects.html"
+        },
+        {
+          "label": "Contact",
+          "url": "/contact.html"
+        }
+      ];
+
+      header.links = links;
+
+      var brandUrl = '/index.html';
+      header.brandUrl = brandUrl;
+    </script>
   </body>
 </html>

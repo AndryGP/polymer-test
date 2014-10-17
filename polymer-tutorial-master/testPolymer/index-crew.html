@@ -32,8 +32,53 @@
   </head>
 
   <body style="background-color: #d2eecb">
-	    <crew-element>
+	    <crew-element id="crew">
 	    	<h2>Crew of Design Framwork</h2>
 	    </crew-element>
+	    <script> 
+	    	var crew = document.getElementById('crew');
+	    	//var crew = document.querySelector('crew-element');
+	    	//var crew = document.querySelector('#crew');
+
+		   	var people = 
+			    [
+		        {
+		          name: "Andrew Bright" ,
+		          role: "Designer",
+		          picture: "dwtd-simple.jpg",
+		          fbuser:"",
+		          twituser:"",
+		          plusnumber:""
+		        },
+		         {
+		          name: "Andrew Bright" ,
+		          role: "Designer",
+		          picture: "dwtd-simple.jpg",
+		          fbuser:"",
+		          twituser:"",
+		          plusnumber:""
+		        },
+		         {
+		          name: "Andrew Bright" ,
+		          role: "Designer",
+		          picture: "dwtd-simple.jpg",
+		          fbuser:"",
+		          twituser:"",
+		          plusnumber:""
+		        },
+		        {
+		          name: "Andrew Bright" ,
+		          role: "Designer",
+		          picture: "dwtd-simple.jpg",
+		          fbuser:"",
+		          twituser:"",
+		          plusnumber:""
+		        },
+		        
+		      	];
+
+	      	crew.people = people;
+
+	    </script>
   </body>
 </html>

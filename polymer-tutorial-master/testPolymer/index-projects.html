@@ -32,9 +32,36 @@
   </head>
 
   <body style="background-color: #d2eecb">
-	    <projects-element>
+	    <projects-element id="projects">
 	    	<h1> Game Versioning </h1>
 	    	<h2> In years we developed various versions of the game increasing features and updating levels.</h2>
 	    </projects-element>
+	    <script>
+	    	var projects = document.getElementById('projects');
+	    	var features = 
+	    	[
+        		{
+		          description: "Dumb Ways To Die" ,
+		          year: "2011",
+		          picture: "dwtd-simple.jpg"
+		        },
+		        {
+		          description: "Dumb Ways To Die Pro" ,
+		          year: "2012",
+		          picture: "dwtd-pro.jpg"
+		        },
+		        {
+		          description: "Dumb Ways To Die Unlimited" ,
+		          year: "2013",
+		          picture: "dwtd-unlimited.jpg"
+		        },
+		        {
+		          description: "Dumb Ways To Die Gold Edition" ,
+		          year: "2014",
+		          picture: "dwtd-gold.jpg"
+		        },
+      		];
+      		projects.features = features;
+	    </script>
   </body>
 </html>
