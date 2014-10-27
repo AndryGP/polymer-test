@@ -20,14 +20,12 @@
 
 			font-weight: 100; 
 		}
-
  		
 	</style>
   <head>
-    <script src="components/platform/platform.js"></script>
-    <link rel="import" href="elements/contact-element.html">
+    <script src="../platform/platform.js"></script>
+    <link rel="import" href="u-contact.html">
     <link rel="import" href="elements/map-element.html">
-
     <link rel="import" href="/components/font-roboto/roboto.html">
 
 
@@ -35,8 +33,8 @@
   </head>
 
   <body style="background-color: #d2eecb">
-  	<contact-element id="contact">
-  	</contact-element>
+  	<u-contact id="contact">
+  	</u-contact>
   	<script >
       var el = document.getElementById('contact');
       var mail= "gta.web2014@gmail.com";
@@ -54,6 +52,5 @@
       el.map = map;
       el.map_description = map_description;
     </script>
-    
   </body>
 </html>

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+	<style> 
+		body {
+      height: 100%;
+      margin: 0;
+      padding: 0;
+      font-family: 'RobotoDraft', sans-serif;
+
+    }
+		h3 {
+      		text-align: center;
+      		font-size: 24px;
+      		font-weight: 500;
+      		font-variant: small-caps;
+   		}
+   		p {
+   			text-align: center;
+      		font-size: 18px;
+      		font-weight: 200;
+   		}
+	</style>
+  <head>
+    <script src="../platform/platform.js"></script>
+    <link rel="import" href="u-content.html">
+    <link rel="import" href="/components/font-roboto/roboto.html">
+
+
+  </head>
+
+  <body style="background-color: #d2eecb">
+  
+  
+  	<u-content id="content">
+  	<h3> Features of the Game </h3>
+  	<p> In May 2013, Metro released a "Dumb Ways to Die" game as an app for iOS devices. The game, developed by Julian Frost and Samuel Baird, invites players to avoid the dangerous activities engaged in by the various characters featured throughout the campaign. Within the app, players can also pledge to "not do dumb stuff around trains". The activities include things like getting toast out with a fork and poking a stick at a grizzly bear. An Android version was also eventually released in September 2013. </p>
+  	</u-content>
+    <script>
+    var content = document.getElementById('content');
+    var features = 
+        [
+          {
+            title: "Number one on games chart" ,
+            subtitle: "This app won the most important app's prize for two years in a row",
+            picture: "top-game.jpg"
+          },
+          {
+            title: "Avalaible on Amazon store" ,
+            subtitle: "Check out the app on Amazon store",
+            picture: "app-store.jpg"
+          },
+          {
+            title: "Forbidden under 16" ,
+            subtitle: "Only 16+ can play this game, because it contains explicit violence",
+            picture: "under-age.jpg"
+          },
+        ];
+      content.features = features;
+    </script>
+    
+  </body>
+</html>

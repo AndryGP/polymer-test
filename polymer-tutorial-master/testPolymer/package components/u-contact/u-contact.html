@@ -1,14 +1,12 @@
 <link rel="import"
       href="/components/polymer/polymer.html">
 
-
-
-<polymer-element name="contact-element">
+<polymer-element name="u-contact">
   <template>
  
   <link rel="stylesheet"
       href="/components/bootstrap/bootstrap.min.css">
-  <link rel="import" href="elements/map-element.html">
+    <link rel="import" href="elements/map-element.html">
 
   <style>
     :host {
@@ -64,6 +62,7 @@
       height: 300px;
     }
 
+
   #formDescription {
     margin-bottom: 40px;
   }
@@ -82,7 +81,7 @@
     margin-bottom: 16px;
   }
   </style>
-    <div id="contact" class="container">
+    <div id="contact">
       <div id="columnLeft2" class="col-md-3">
       </div>
 
@@ -91,15 +90,16 @@
          <p> {{ description }} </p>
          <div id="containerContact">
            <address>
-              <img id="mailIcon"src="/components/images/mail.jpg"> <a href="mailto:{{mail}}">{{mail}}</a>
+              <img id="mailIcon"src="images/mail.jpg"> <a href="mailto:{{mail}}">{{mail}}</a>
             </address>
             <address>
-              <img id="phoneIcon"src="/components/images/phone.jpg"> <a href="tel:{{phone}}">{{phone}}</a>
+              <img id="phoneIcon"src="images/phone.jpg"> <a href="tel:{{phone}}">{{phone}}</a>
            </address>
          </div>
            <h3>{{ map }}</h3>
            <p> {{ map_description }}</p>
-            <map-element latitude="41.855464" longitude="12.467707" zoom="15"></map-element>
+           <map-element latitude="41.855464" longitude="12.467707" zoom="15"></map-element>
+         
          
       </div>
       
@@ -135,7 +135,7 @@
               </label>
             </div>
             <div>
-              <button name="submit" type="submit" id="contact-submit"> <img id="sendIcon" src="/components/images/send.jpg"></button>
+              <button name="submit" type="submit" id="contact-submit"> <img id="sendIcon" src="images/send.jpg"></button>
             </div>
           </form>
           <!-- /Form -->
@@ -149,7 +149,7 @@
       
   </template>
   <script>
-   Polymer({
+   Polymer('u-contact', {
       
       
     });
